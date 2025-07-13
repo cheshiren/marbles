@@ -4,14 +4,16 @@ import random
 
 # LIFE = 24107
 # LIFE: int = 2410
-SIZE: int = 6
+SIZE: int = 4
 SPACE: int = 2
-BORDER_HAVE: int = 1
-BORDER_SPENT: int = 2
+# BORDER_HAVE: int = 1
+# BORDER_SPENT: int = 2
+BORDER_HAVE: int = 0
+BORDER_SPENT: int = 1
 COLOR1: str = "#3A3A3A"
 COLOR2: str = "#D9D9D9"
 FDAY: date = date(1983, 12, 13)
-LDAY: date = date(2049, 12, 13)
+LDAY: date = date(2058, 12, 13)
 TODAY: date = date.today()
 LIFE = LDAY - FDAY
 LIFE_DAYS = LIFE.days
@@ -30,6 +32,7 @@ def main(page: ft.Page):
 	page.horizontal_alignment=ft.CrossAxisAlignment.CENTER
 	# page.window_height=1080
 	# page.window_width=1920
+
 	page.padding = 0
 	
 	title = ft.Text(
@@ -104,3 +107,4 @@ def main(page: ft.Page):
 	
 		
 ft.app(target=main, assets_dir="assets", web_renderer=ft.WebRenderer.HTML)
+# ft.app(target=main, assets_dir="assets")
