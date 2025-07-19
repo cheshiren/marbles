@@ -36,6 +36,10 @@ def main(page: ft.Page):
 
 	page.padding = 0
 	
+	tody = ft.Text(
+		color=COLOR2,
+		value=TODAY
+	)
 	title = ft.Text(
 		color=COLOR2,
 		value=f"{SPENT_DAYS}d [{int(SPENT_DAYS/7)}w] — {REST_DAYS}d [{int(REST_DAYS/7)}w]"
@@ -90,6 +94,7 @@ def main(page: ft.Page):
 	)
 
 	jar.controls.insert(0, title)
+	jar.controls.insert(0, tody)
 
 	# for d in days:
 	# 	jar.controls.append(d)
