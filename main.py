@@ -4,12 +4,13 @@ import random
 
 # LIFE = 24107
 # LIFE: int = 2410
-SIZE: int = 4
-SPACE: int = 2
+SIZE: int = 5
+SPACE: int = 1
 # BORDER_HAVE: int = 1
 # BORDER_SPENT: int = 2
 BORDER_HAVE: int = 0
-BORDER_SPENT: int = 1
+BORDER_TODAY: int = 1
+BORDER_SPENT: int = 2
 COLOR1: str = "#3A3A3A"
 COLOR2: str = "#D9D9D9"
 FDAY: date = date(1983, 12, 13)
@@ -48,6 +49,7 @@ def main(page: ft.Page):
 	# days.append(day0)
 	for d in range(LIFE_DAYS):
 		_border = BORDER_HAVE if d > SPENT_DAYS else BORDER_SPENT
+		_border = BORDER_TODAY if d == SPENT_DAYS else _border
 		_day = ft.Container(
 			width=SIZE,
 			height=SIZE,
