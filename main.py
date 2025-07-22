@@ -53,7 +53,7 @@ def main(page: ft.Page):
 	# days.append(day0)
 	for d in range(LIFE_DAYS):
 		_border = BORDER_HAVE if d > SPENT_DAYS else BORDER_SPENT
-		_border = BORDER_TODAY if d == SPENT_DAYS else _border
+		_border = BORDER_TODAY if d == SPENT_DAYS+1 else _border
 		_day = ft.Container(
 			width=SIZE,
 			height=SIZE,
