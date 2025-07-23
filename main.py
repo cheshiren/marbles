@@ -37,6 +37,7 @@ def main(page: ft.Page):
 	page.padding = 0
 	
 	tody = ft.Text(
+		style=ft.TextStyle(size=20, weight=ft.FontWeight.BOLD),
 		color=COLOR2,
 		value=TODAY
 	)
